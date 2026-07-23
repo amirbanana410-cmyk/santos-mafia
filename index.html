@@ -3,12 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>SANTOS MAFIA</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
@@ -16,35 +12,54 @@
 
 <body>
 
-<div class="hero">
+<div class="particles"></div>
 
-<div class="overlay"></div>
-
-<div class="content">
+<header>
 
 <h1>SANTOS MAFIA</h1>
 
-<p class="slogan">
-LOYALTY • RESPECT • POWER
-</p>
-
-<p class="description">
-Only the strongest become family.
+<p>
+THE STRONGEST FAMILY IN ONE STATE RP
 </p>
 
 <button id="joinBtn">
 JOIN THE FAMILY
 </button>
 
-</div>
+</header>
 
-</div>
 
-<div id="application" class="hidden">
+<section id="application" class="hidden">
 
-<!-- فرم عضویت اینجا قرار می‌گیرد -->
+<h2>
+MEMBERSHIP APPLICATION
+</h2>
 
-</div>
+<form id="applyForm">
+
+<input id="name" placeholder="Your Nickname" required>
+
+<input id="age" placeholder="Age" required>
+
+<input id="discord" placeholder="Discord Username" required>
+
+<input id="level" placeholder="Game Level" required>
+
+<input id="ak" placeholder="AK Level" required>
+
+
+<textarea id="reason" placeholder="Why do you want to join Santos Mafia?"></textarea>
+
+
+<button class="submit">
+SEND APPLICATION
+</button>
+
+
+</form>
+
+</section>
+
 
 <script src="script.js"></script>
 
