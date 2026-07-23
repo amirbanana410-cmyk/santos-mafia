@@ -5,257 +5,54 @@
     font-family:Arial, sans-serif;
 }
 
+
 body{
+
     min-height:100vh;
-    background:
-    radial-gradient(circle at top,#3b2a00,#050505 55%);
-    color:white;
-    overflow-x:hidden;
-}
-
-
-/* Header */
-
-header{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-
-
-header h1{
-    font-size:70px;
-    letter-spacing:8px;
-    color:#d4af37;
-    text-shadow:
-    0 0 10px #d4af37,
-    0 0 30px #8a6b00;
-}
-
-
-header p{
-    margin-top:20px;
-    font-size:20px;
-    color:#ddd;
-    letter-spacing:3px;
-}
-
-
-/* Button */
-
-button{
-    margin-top:40px;
-    padding:18px 45px;
-    border:none;
-    border-radius:30px;
-    background:#d4af37;
-    color:black;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
-}
-
-
-button:hover{
-    transform:scale(1.1);
-    box-shadow:
-    0 0 20px #d4af37;
-}
-
-
-
-/* Application */
-
-#application{
-    width:90%;
-    max-width:600px;
-    margin:auto;
-    padding:40px;
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(15px);
-    border:1px solid #d4af37;
-    border-radius:20px;
-}
-
-
-#application h2{
-    text-align:center;
-    color:#d4af37;
-    margin-bottom:30px;
-}
-
-
-input,
-textarea{
-
-    width:100%;
-    padding:15px;
-    margin:10px 0;
-
-    background:#111;
-    border:1px solid #555;
-    color:white;
-
-    border-radius:10px;
-}
-
-
-textarea{
-    height:120px;
-}
-
-
-.submit{
-    width:100%;
-}
-
-
-/* Hidden */
-
-.hidden{
-    display:none;
-}
-
-
-
-/* Mobile */
-
-@media(max-width:700px){
-
-header h1{
-    font-size:40px;
-}
-
-header p{
-    font-size:14px;
-}
-
-}
-header{
-    animation: fadeIn 1.5s ease;
-}
-
-
-header h1{
-    animation: glow 2s infinite alternate;
-}
-
-
-@keyframes glow{
-
-    from{
-        text-shadow:
-        0 0 10px #d4af37,
-        0 0 20px #d4af37;
-    }
-
-    to{
-        text-shadow:
-        0 0 30px #d4af37,
-        0 0 60px #8a6b00;
-    }
-
-}
-
-
-@keyframes fadeIn{
-
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
-}
-
-
-body::before{
-
-    content:"";
-    position:fixed;
-    inset:0;
 
     background:
-    linear-gradient(
-    120deg,
-    rgba(212,175,55,.15),
-    transparent,
-    rgba(0,0,0,.8)
+    radial-gradient(
+    circle at top,
+    #3b2a00,
+    #050505 60%
     );
-header h1{
-    font-size:80px;
-    color:#d4af37;
-    animation: titleMove 3s infinite alternate;
-}
 
+    color:white;
 
-header p{
-    animation: slideText 2s ease;
-}
-
-
-button{
-    background:linear-gradient(45deg,#d4af37,#fff0a0,#d4af37);
-    background-size:200%;
-    animation: buttonGlow 3s infinite;
-}
-
-
-@keyframes titleMove{
-
-    from{
-        transform:scale(1);
-    }
-
-    to{
-        transform:scale(1.08);
-    }
+    overflow-x:hidden;
 
 }
 
 
-@keyframes slideText{
+/* HEADER */
 
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
+header{
 
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    height:100vh;
 
-}
+    display:flex;
 
+    flex-direction:column;
 
-@keyframes buttonGlow{
+    justify-content:center;
 
-    0%{
-        background-position:0%;
-    }
+    align-items:center;
 
-    100%{
-        background-position:200%;
-    }
+    text-align:center;
 
 }
-    
-    pointer-events:none;
 
-}
+
+/* POSTER */
+
 .poster{
+
     width:260px;
+
     max-width:85%;
+
     border-radius:25px;
+
     border:2px solid #d4af37;
 
     padding:10px;
@@ -263,122 +60,440 @@ button{
     background:rgba(0,0,0,.6);
 
     box-shadow:
+
     0 0 20px #d4af37,
+
     0 0 60px rgba(212,175,55,.4);
 
     margin-bottom:25px;
 
-    animation: posterGlow 3s infinite alternate;
+    animation:posterGlow 3s infinite alternate;
+
 }
+
 
 
 @keyframes posterGlow{
 
     from{
+
         transform:scale(1);
+
     }
+
 
     to{
-        transform:scale(1.03);
+
+        transform:scale(1.04);
+
     }
 
 }
+
+
+
+/* TITLE */
+
+
+header h1{
+
+    font-size:70px;
+
+    letter-spacing:8px;
+
+    color:#d4af37;
+
+    animation:titleMove 3s infinite alternate;
+
+    text-shadow:
+
+    0 0 10px #d4af37,
+
+    0 0 40px #8a6b00;
+
 }
 
 
-@keyframes posterIn{
 
-from{
-    opacity:0;
-    transform:scale(.8);
+@keyframes titleMove{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+
+    to{
+
+        transform:scale(1.08);
+
+    }
+
 }
 
-to{
-    opacity:1;
-    transform:scale(1);
-}
+
+
+header p{
+
+    margin-top:20px;
+
+    font-size:20px;
+
+    letter-spacing:3px;
+
+    color:#ddd;
+
+    animation:fadeText 2s ease;
 
 }
-#application{
-    background:rgba(10,10,10,0.85);
+
+
+
+@keyframes fadeText{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+/* BUTTON */
+
+button{
+
+    margin-top:40px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+    45deg,
+    #b8860b,
+    #d4af37,
+    #fff0a0
+    );
+
+    background-size:200%;
+
+    color:#000;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    animation:buttonGlow 3s infinite;
+
+}
+
+
+
+button:hover{
+
+    transform:scale(1.1);
+
     box-shadow:
-    0 0 40px rgba(212,175,55,.35);
-    animation: formShow 1.2s ease;
+
+    0 0 30px #d4af37;
+
+    background-position:right;
+
 }
+
+
+
+@keyframes buttonGlow{
+
+    0%{
+
+        background-position:0%;
+
+    }
+
+
+    100%{
+
+        background-position:200%;
+
+    }
+
+}
+
+
+
+/* APPLICATION FORM */
+
+
+#application{
+
+    width:90%;
+
+    max-width:600px;
+
+    margin:auto;
+
+    padding:40px;
+
+
+    background:
+
+    rgba(10,10,10,.85);
+
+
+    backdrop-filter:blur(15px);
+
+
+    border:
+
+    2px solid #d4af37;
+
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 0 40px rgba(212,175,55,.35);
+
+
+    animation:formShow 1.2s ease;
+
+}
+
+
+
+#application h2{
+
+    text-align:center;
+
+    color:#d4af37;
+
+    margin-bottom:30px;
+
+    letter-spacing:2px;
+
+}
+
+
+
+/* INPUTS */
 
 
 input,
 textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    margin:10px 0;
+
+
     background:#050505;
-    border:1px solid #d4af37;
+
+
+    border:
+
+    1px solid #d4af37;
+
+
+    color:white;
+
+
+    border-radius:10px;
+
+
     transition:.3s;
+
 }
+
 
 
 input:focus,
 textarea:focus{
+
+
     outline:none;
-    border-color:#fff0a0;
+
+
     box-shadow:
+
     0 0 15px #d4af37;
+
+
+    transform:scale(1.02);
+
 }
+
+
+
+textarea{
+
+    height:120px;
+
+}
+
+
+
+/* SUBMIT */
 
 
 .submit{
+
+    width:100%;
+
     background:#d4af37;
+
     color:#000;
+
     letter-spacing:2px;
+
 }
+
 
 
 .submit:hover{
+
     background:#fff0a0;
-    transform:scale(1.05);
+
+    transform:translateY(-3px);
+
 }
+
 
 
 @keyframes formShow{
+
     from{
+
         opacity:0;
+
         transform:translateY(50px);
+
     }
+
 
     to{
+
         opacity:1;
+
         transform:translateY(0);
+
     }
-}
-.submit{
-    background:linear-gradient(45deg,#b8860b,#d4af37,#f7e08a);
-    background-size:200%;
-    color:#000;
-    font-weight:bold;
-    letter-spacing:2px;
-    transition:.3s;
-}
 
-.submit:hover{
-    background-position:right center;
-    transform:translateY(-3px);
-    box-shadow:0 0 20px #d4af37;
 }
-input,
-textarea{
+    }
 
-    transition:.3s;
+}
+/* HIDDEN */
+
+.hidden{
+
+    display:none;
 
 }
 
-input:focus,
-textarea:focus{
 
-    outline:none;
 
-    border:1px solid #d4af37;
+/* BACKGROUND EFFECT */
 
-    box-shadow:
-    0 0 15px rgba(212,175,55,.7);
 
-    transform:scale(1.02);
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    rgba(212,175,55,.15),
+
+    transparent,
+
+    rgba(0,0,0,.8)
+
+    );
+
+
+    pointer-events:none;
+
+}
+
+
+
+/* MOBILE */
+
+
+@media(max-width:700px){
+
+
+    header h1{
+
+        font-size:40px;
+
+        letter-spacing:4px;
+
+    }
+
+
+
+    header p{
+
+        font-size:14px;
+
+    }
+
+
+
+    .poster{
+
+        width:220px;
+
+    }
+
+
+
+    #application{
+
+        width:95%;
+
+        padding:25px;
+
+    }
+
+
+}
+
+
+
+/* SMOOTH SCROLL */
+
+
+html{
+
+    scroll-behavior:smooth;
 
 }
